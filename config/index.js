@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const copyWebpackPlugin = require("copy-webpack-plugin")
 
 function getEntry(entry) {
     let obj = {}
@@ -28,13 +29,12 @@ function createHTMLPlugin(options) {
 }
 
 function getCSSLoader(options) {
-    var extractCSS = options.linkcss === 'true' ? MiniCssExtractPlugin : false
+    var extractCSS = options.linkcss ? MiniCssExtractPlugin : false
     var baseLoader = [
         {
             loader: 'css-loader',
             options: {
-                importLoaders: 1,
-                modules: true
+                importLoaders: 1
             }
         },
         {
@@ -109,7 +109,11 @@ var getConfig = options => {
             new MiniCssExtractPlugin({
                 filename: '[name].css',
                 chunkFilename: '[id].css'
-            })
+            }),
+            new copyWebpackPlugin([{
+                from:`${options.path}\\public`,    //要打包的静态资源目录地址，这里的__dirname是指项目目录下，是node的一种语法，可以直接定位到本机的项目目录中
+                to: './public'  //要打包到的文件夹路径，跟随output配置中的目录。所以不需要再自己加__dirname
+            }])
         ]
     }
 }
