@@ -3,7 +3,8 @@
   "description": "test",
   "scripts": {
     "build": "node bin/main build",
-    "dev": "node bin/main dev"
+    "dev": "node bin/main dev",
+    "generate": "node bin/main g"
   },
   "bin": {
     "jq-auto-cli": "./bin/main.js"
