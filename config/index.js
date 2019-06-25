@@ -1,6 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const copyWebpackPlugin = require('copy-webpack-plugin')
 
 function getEntry(entry) {
   let obj = {}
@@ -18,7 +17,6 @@ function createHTMLPlugin(options) {
       filename: `html/${item}.html`,
       template: `${absPath}\\html\\${item}.html`,
       inject: true,
-      hash: true,
       minify: {
         removeComments: true, //删除注释
         collapseWhitespace: true //压缩空格
