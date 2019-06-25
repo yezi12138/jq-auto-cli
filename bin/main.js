@@ -28,9 +28,7 @@ program
   .command('build')
   .description('build the project')
   .action((options) => {
-    buildQues({
-        mode: 'production'
-    })
+    buildQues()
   })
 
 /**
@@ -40,9 +38,7 @@ program
 .command('dev')
 .description('dev the project')
 .action((options) => {
-    devQues({
-        mode: 'development'
-    })
+    devQues()
 })
 
 program.parse(process.argv)
