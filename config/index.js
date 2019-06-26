@@ -27,7 +27,7 @@ function createHTMLPlugin(options) {
 }
 
 function getCSSLoader(options) {
-  var extractCSS = options.linkcss ? false : MiniCssExtractPlugin
+  var extractCSS = options.insetCSS ? MiniCssExtractPlugin : false
   var baseLoader = [
     {
       loader: 'css-loader',

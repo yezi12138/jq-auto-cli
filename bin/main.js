@@ -1,44 +1,23 @@
-#!/usr/bin/env node
-
-const program = require('commander')
 const createFiles = require('../lib/createFiles')
-const { generateQues, devQues, buildQues } = require('../lib/question')
+const { generateQues, devAndBuildQues } = require('../lib/question')
+const { fail } = require('../lib/chalk')
 
-program
-    .version(require('../package').version)
-
-/**
- * generate
- * 自动生成文件
- */
-program
-.command('generate')
-.alias('g')
-.description('auto create files')
-.action(function () {
-    generateQues().then(answers => {
+let argv = process.argv.slice(2)
+if (argv.length === 1) {
+  let directive = argv[0]
+  switch (directive) {
+    case 'dev':
+        devAndBuildQues('development')
+      break
+    case 'build':
+        devAndBuildQues('production')
+      break
+    case 'generate':
+      generateQues().then(answers => {
         createFiles(answers)
-    })
-})
-
-/**
- * build progress
- */
-program
-  .command('build')
-  .description('build the project')
-  .action((options) => {
-    buildQues()
-  })
-
-/**
- * dev progress
- */
-program
-.command('dev')
-.description('dev the project')
-.action((options) => {
-    devQues()
-})
-
-program.parse(process.argv)
+      })
+      break
+  }
+} else {
+    fail('错误指令')
+}

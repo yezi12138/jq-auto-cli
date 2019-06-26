@@ -4,7 +4,7 @@
   "scripts": {
     "build": "node bin/main build",
     "dev": "node bin/main dev",
-    "generate": "node bin/main g"
+    "generate": "node bin/main generate"
   },
   "bin": {
     "jq-auto-cli": "./bin/main.js"
