@@ -1,4 +1,3 @@
-const createFiles = require('../lib/createFiles')
 const { generateQues, devAndBuildQues } = require('../lib/question')
 const { fail } = require('../lib/chalk')
 
@@ -13,9 +12,7 @@ if (argv.length === 1) {
         devAndBuildQues('production')
       break
     case 'generate':
-      generateQues().then(answers => {
-        createFiles(answers)
-      })
+      generateQues()
       break
   }
 } else {
