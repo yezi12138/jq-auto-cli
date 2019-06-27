@@ -1,6 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const path = require('path')
 
 function getEntry(entry) {
   let obj = {}
@@ -94,15 +93,6 @@ var getConfig = options => {
         {
           test: /\.s?css$/,
           use: getCSSLoader(options)
-        },
-        {
-            test: /\.html$/,
-            use: [{
-                loader:path.join(__dirname, '../cms-loader/index'),
-                options: {
-                    path: options.path
-                }
-            }, 'html-loader']
         }
       ]
     },
