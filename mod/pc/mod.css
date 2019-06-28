@@ -1,0 +1,109 @@
+@charset "UTF-8";
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+ul li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: #333; }
+  a:hover {
+    color: #006cb8;
+    cursor: pointer; }
+
+/* 底部 */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #fff;
+  background-color: #ed7d31; }
+  footer a {
+    color: #fff;
+    text-decoration: none; }
+
+.wjlogo {
+  text-align: center;
+  width: 980px;
+  margin: 0 auto;
+  background: #ed7d31 !important; }
+  .wjlogo img {
+    height: 56px;
+    border: #ededed 1px solid;
+    margin: 10px 15px 25px 15px;
+    padding: 0 10px;
+    background: white; }
