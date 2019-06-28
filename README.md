@@ -43,7 +43,7 @@
 
 新建任意一个文件夹，进入命令行输入:
 
-> git clone git@github.com:yezi12138/jq-auto-cli.git
+>  git clone https://github.com/yezi12138/jq-auto-cli.git
 
 安装对应依赖：
 
@@ -67,24 +67,22 @@
 
 ```
 ? 请指定需要生成文件的绝对路径:  C:\Users\yeyongqin\Desktop\pan
-? 请指定模板的绝对路径(没有则生成空文件): C:\Users\yeyongqin\Desktop\mod
+? 是否生成PC端的模板，否则生成WAP端: y
 ? 请输入需要生成的文件名，以,分割(index,list,arcticle):  index,list
 ? 请输入需要生成的文件名后缀，以,分割(js,css,html):  js,html
 ```
 
-这个指令的意思为： 以`C:\Users\yeyongqin\Desktop\mod`目录下的mod文件为模板，在`C:\Users\yeyongqin\Desktop\pan`目录下创建对应的文件
+这个指令的意思为： 在`C:\Users\yeyongqin\Desktop\pan`目录下创建对应的文件
 
 
 
-**其中mod目录下规定文件名必须为`mod`**,后缀则为想创建的对应文件。如上面输入，我们想创建两个文件夹：
+**其中手脚架的mod目录下规定文件名必须为`mod`**,后缀则为想创建的对应文件。如上面输入，我们想创建两个文件夹：
 
 **JS**: `index.js` `list.js`
 
 **HTML**:`index.html` `list.html `
 
-则在模板目录下,创建文件: `mod.js`   `mod.html`即可
-
-**如果没有配置模板的路径，则创建空文件**
+则在手脚架目录下,创建文件: `mod.js`   `mod.html`即可
 
 
 
@@ -93,6 +91,10 @@
 **进入到手脚架的目录下**，进入命令行模式，输入：
 
 > npm run dev
+
+
+
+**注意：入口文件必须与模板名字相同： index.js ---> index.html**
 
 
 
@@ -105,6 +107,10 @@
 **进入到手脚架的目录下**，进入命令行模式，输入：
 
 > npm run build
+
+
+
+**注意：入口文件必须与模板名字相同： index.js ---> index.html**
 
 
 
@@ -196,6 +202,10 @@ module.exports = {
 
 
 ## 更新日志：
+
+### 版本： 1.2.1
+
+- [x] **[功能]** 增加默认模板
 
 ### 版本： 1.2.0
 
