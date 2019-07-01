@@ -41,9 +41,11 @@
 
 ## 手脚架安装
 
+### 独立引用
+
 新建任意一个文件夹，进入命令行输入:
 
->  git clone https://github.com/yezi12138/jq-auto-cli.git
+> git clone https://github.com/yezi12138/jq-auto-cli.git
 
 安装对应依赖：
 
@@ -55,11 +57,27 @@
 
 
 
-## 自动生成文件(npm run generate)
+### 在项目中引用
+
+全局安装：
+
+> cnpm i -g jq-auto-cli
+
+在项目目录下，初始化：
+
+> jq-auto-cli init    (安装依赖)
+
+
+
+## 自动生成文件
 
 **进入到手脚架的目录下**，进入命令行模式，输入：
 
 > npm run generate
+
+**在项目中使用：** 
+
+> jq-auto-cli generate
 
 
 
@@ -86,11 +104,15 @@
 
 
 
-## 开发模式（npm run dev）
+## 开发模式
 
 **进入到手脚架的目录下**，进入命令行模式，输入：
 
 > npm run dev
+
+**在项目中使用：** 
+
+> jq-auto-cli dev
 
 
 
@@ -102,11 +124,15 @@
 
 
 
-## 生产模式（npm run build）
+## 生产模式
 
 **进入到手脚架的目录下**，进入命令行模式，输入：
 
 > npm run build
+
+**在项目中使用：** 
+
+> jq-auto-cli build
 
 
 
@@ -202,6 +228,10 @@ module.exports = {
 
 
 ## 更新日志：
+
+### 版本： 1.3.3
+
+- [x] **[功能]** 可以讲插件在项目中使用，使用规则看上方介绍手脚架安装
 
 ### 版本： 1.2.1
 
