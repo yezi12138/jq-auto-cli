@@ -46,7 +46,7 @@ program
   .description('init')
   .action(option => {
     let devDepend = Object.keys(package.devDependencies).join(' ')
-    if (shell.exec(`cnpm i -D ${devDepend}`).code !== 0) {
+    if (shell.exec(`cnpm i ${devDepend}`).code !== 0) {
         fail('初始化依赖失败...')
     } else {
         success('初始化依赖完毕...')
